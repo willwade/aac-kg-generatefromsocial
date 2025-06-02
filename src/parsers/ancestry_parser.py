@@ -200,42 +200,32 @@ class AncestryGedcomParser:
                 f"Searching for: '{focus_name}' among {len(self.individuals)} individuals"
             )
 
-            # First try exact match
-            for person in self.individuals.values():
+            # Convert to ordered list to maintain file order (first occurrence wins)
+            individuals_list = list(self.individuals.items())
+
+            # Strategy: Prioritize file order over match type - the first matching person
+            # in the file is most likely to be the focus person (especially in personal trees)
+
+            # Single pass through the file, taking the first match of any type
+            for person_id, person in individuals_list:
                 person_name = person.get("name", "").lower()
+
+                # Check for exact match first
                 if focus_name_lower == person_name:
-                    print(f"Found exact match: {person.get('name')}")
+                    print(f"Found exact match (first in file): {person.get('name')}")
                     return person
 
-            # Then try partial match - all parts of focus name must be in person name
-            for person in self.individuals.values():
-                person_name = person.get("name", "").lower()
-                if all(part in person_name for part in focus_parts):
-                    print(f"Found partial match: {person.get('name')}")
+                # Check for partial match (all parts must be in name)
+                elif all(part in person_name for part in focus_parts):
+                    print(f"Found partial match (first in file): {person.get('name')}")
                     return person
 
-            # Finally try any part match - but prefer more recent births
-            candidates = []
-            for person in self.individuals.values():
+            # If no exact or partial match found, do a second pass for any part match
+            for person_id, person in individuals_list:
                 person_name = person.get("name", "").lower()
                 if any(part in person_name for part in focus_parts):
-                    candidates.append(person)
-
-            if candidates:
-                # Sort by birth date if available (prefer more recent)
-                def get_birth_year(person):
-                    birth_date = person.get("birth", {}).get("date", "")
-                    # Extract year from date string
-                    import re
-
-                    year_match = re.search(r"\b(19|20)\d{2}\b", birth_date)
-                    return int(year_match.group()) if year_match else 0
-
-                candidates.sort(key=get_birth_year, reverse=True)
-                print(
-                    f"Found {len(candidates)} candidates, selecting: {candidates[0].get('name')}"
-                )
-                return candidates[0]
+                    print(f"Found name match (first in file): {person.get('name')}")
+                    return person
 
         # If no specific person requested or not found, return the first person
         return next(iter(self.individuals.values()))
