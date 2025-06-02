@@ -192,12 +192,50 @@ class AncestryGedcomParser:
             return None
 
         if focus_name:
-            # Search for person by name
+            # Search for person by name with flexible matching
             focus_name_lower = focus_name.lower()
+            focus_parts = focus_name_lower.split()
+
+            print(
+                f"Searching for: '{focus_name}' among {len(self.individuals)} individuals"
+            )
+
+            # First try exact match
             for person in self.individuals.values():
                 person_name = person.get("name", "").lower()
-                if focus_name_lower in person_name or person_name in focus_name_lower:
+                if focus_name_lower == person_name:
+                    print(f"Found exact match: {person.get('name')}")
                     return person
+
+            # Then try partial match - all parts of focus name must be in person name
+            for person in self.individuals.values():
+                person_name = person.get("name", "").lower()
+                if all(part in person_name for part in focus_parts):
+                    print(f"Found partial match: {person.get('name')}")
+                    return person
+
+            # Finally try any part match - but prefer more recent births
+            candidates = []
+            for person in self.individuals.values():
+                person_name = person.get("name", "").lower()
+                if any(part in person_name for part in focus_parts):
+                    candidates.append(person)
+
+            if candidates:
+                # Sort by birth date if available (prefer more recent)
+                def get_birth_year(person):
+                    birth_date = person.get("birth", {}).get("date", "")
+                    # Extract year from date string
+                    import re
+
+                    year_match = re.search(r"\b(19|20)\d{2}\b", birth_date)
+                    return int(year_match.group()) if year_match else 0
+
+                candidates.sort(key=get_birth_year, reverse=True)
+                print(
+                    f"Found {len(candidates)} candidates, selecting: {candidates[0].get('name')}"
+                )
+                return candidates[0]
 
         # If no specific person requested or not found, return the first person
         return next(iter(self.individuals.values()))
