@@ -128,6 +128,9 @@ class AncestryGedcomParser:
                 self.current_record["birth"] = {}
             elif tag == "DEAT":
                 self.current_record["death"] = {}
+            elif tag == "FACT":
+                # Initialize fact processing - we'll capture the type in level 2
+                self.current_record["_processing_fact"] = True
             elif tag == "HUSB":
                 self.current_record["husband"] = (
                     value[1:-1] if value.startswith("@") else value
@@ -156,7 +159,7 @@ class AncestryGedcomParser:
                 )
 
         elif level == 2 and self.current_record:
-            # Second-level tags (dates, places)
+            # Second-level tags (dates, places, fact types)
             if tag == "DATE":
                 if (
                     "birth" in self.current_record
@@ -179,12 +182,33 @@ class AncestryGedcomParser:
                     and "place" not in self.current_record["death"]
                 ):
                     self.current_record["death"]["place"] = value
+            elif tag == "TYPE" and self.current_record.get("_processing_fact"):
+                # Capture fact type (like AKA)
+                if value == "AKA":
+                    self.current_record["_processing_aka"] = True
+            elif tag == "NOTE" and self.current_record.get("_processing_aka"):
+                # Capture AKA name
+                if "aka_names" not in self.current_record:
+                    self.current_record["aka_names"] = []
+                self.current_record["aka_names"].append(value.strip())
+                # Clean up processing flags
+                self.current_record.pop("_processing_fact", None)
+                self.current_record.pop("_processing_aka", None)
 
     def _clean_name(self, name: str) -> str:
         """Clean GEDCOM name format (remove slashes around surname)."""
         # GEDCOM format: Given /Surname/ Suffix
         name = re.sub(r"/([^/]+)/", r"\1", name)  # Remove slashes around surname
         return " ".join(name.split())  # Normalize whitespace
+
+    def _get_preferred_name(self, person: Dict) -> str:
+        """Get the preferred name for a person, using AKA if available."""
+        # If person has AKA names, use the first one (most commonly used)
+        if "aka_names" in person and person["aka_names"]:
+            return person["aka_names"][0]
+
+        # Otherwise use the formal name
+        return person.get("name", "Unknown Person")
 
     def _find_focus_person(self, focus_name: Optional[str]) -> Optional[Dict]:
         """Find the person to focus on in the family tree."""
@@ -269,9 +293,10 @@ class AncestryGedcomParser:
             father_id = family.get("husband")
             if father_id and father_id in self.individuals:
                 father = self.individuals[father_id]
+                father_name = self._get_preferred_name(father)
                 memory.people.append(
                     {
-                        "name": father.get("name", "Unknown Father"),
+                        "name": father_name,
                         "description": "Father",
                         "relationship_type": "parent",
                         "source": "ancestry_gedcom",
@@ -282,9 +307,10 @@ class AncestryGedcomParser:
             mother_id = family.get("wife")
             if mother_id and mother_id in self.individuals:
                 mother = self.individuals[mother_id]
+                mother_name = self._get_preferred_name(mother)
                 memory.people.append(
                     {
-                        "name": mother.get("name", "Unknown Mother"),
+                        "name": mother_name,
                         "description": "Mother",
                         "relationship_type": "parent",
                         "source": "ancestry_gedcom",
@@ -296,9 +322,10 @@ class AncestryGedcomParser:
             for sibling_id in siblings:
                 if sibling_id != focus_id and sibling_id in self.individuals:
                     sibling = self.individuals[sibling_id]
+                    sibling_name = self._get_preferred_name(sibling)
                     memory.people.append(
                         {
-                            "name": sibling.get("name", "Unknown Sibling"),
+                            "name": sibling_name,
                             "description": "Sibling",
                             "relationship_type": "sibling",
                             "source": "ancestry_gedcom",
@@ -319,9 +346,10 @@ class AncestryGedcomParser:
 
                 if spouse_id and spouse_id in self.individuals:
                     spouse = self.individuals[spouse_id]
+                    spouse_name = self._get_preferred_name(spouse)
                     memory.people.append(
                         {
-                            "name": spouse.get("name", "Unknown Spouse"),
+                            "name": spouse_name,
                             "description": "Spouse",
                             "relationship_type": "spouse",
                             "source": "ancestry_gedcom",
@@ -333,9 +361,10 @@ class AncestryGedcomParser:
                 for child_id in children:
                     if child_id in self.individuals:
                         child = self.individuals[child_id]
+                        child_name = self._get_preferred_name(child)
                         memory.people.append(
                             {
-                                "name": child.get("name", "Unknown Child"),
+                                "name": child_name,
                                 "description": "Child",
                                 "relationship_type": "child",
                                 "source": "ancestry_gedcom",
