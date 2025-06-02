@@ -1,0 +1,344 @@
+{
+  "entities": {
+    "Will_Wade": {
+      "id": "Will_Wade",
+      "name": "Will Wade",
+      "entity_type": "Person",
+      "properties": {
+        "pronouns": "he/him",
+        "location": "Manchester, UK",
+        "workplace": "Open Assistive",
+        "role": "Innovation & Research Manager"
+      },
+      "created_at": "2025-06-01T23:55:49.162746"
+    },
+    "Manchester_UK": {
+      "id": "Manchester_UK",
+      "name": "Manchester, UK",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162757"
+    },
+    "Open_Assistive": {
+      "id": "Open_Assistive",
+      "name": "Open Assistive",
+      "entity_type": "Organization",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162765"
+    },
+    "Innovation_Research_Manager": {
+      "id": "Innovation_Research_Manager",
+      "name": "Innovation & Research Manager",
+      "entity_type": "Role",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162772"
+    },
+    "Daisy": {
+      "id": "Daisy",
+      "name": "Daisy",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162778"
+    },
+    "slt": {
+      "id": "slt",
+      "name": "slt",
+      "entity_type": "Role",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162861"
+    },
+    "supercore": {
+      "id": "supercore",
+      "name": "supercore",
+      "entity_type": "Memory",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162966"
+    },
+    "Keith_Vertanen": {
+      "id": "Keith_Vertanen",
+      "name": "Keith Vertanen",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162974"
+    },
+    "Lisa": {
+      "id": "Lisa",
+      "name": "Lisa",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162983"
+    },
+    "AT_Charity": {
+      "id": "AT_Charity",
+      "name": "AT Charity",
+      "entity_type": "Organization",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.162995"
+    },
+    "AAC_conference_in_Liverpool": {
+      "id": "AAC_conference_in_Liverpool",
+      "name": "AAC conference in Liverpool",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163002"
+    },
+    "Barcelona_July_2024": {
+      "id": "Barcelona_July_2024",
+      "name": "Barcelona July 2024",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163136"
+    },
+    "VoiceGarden_launch": {
+      "id": "VoiceGarden_launch",
+      "name": "VoiceGarden launch",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163147"
+    },
+    "TTS": {
+      "id": "TTS",
+      "name": "TTS",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163154"
+    },
+    "open_hardware": {
+      "id": "open_hardware",
+      "name": "open hardware",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163160"
+    },
+    "biking": {
+      "id": "biking",
+      "name": "biking",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163164"
+    },
+    "Sylvanian_families_with_Alice": {
+      "id": "Sylvanian_families_with_Alice",
+      "name": "Sylvanian families with Alice",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163171"
+    },
+    "That_sounds_like_a_plan": {
+      "id": "That_sounds_like_a_plan",
+      "name": "That sounds like a plan.",
+      "entity_type": "Phrase",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163177"
+    },
+    "Could_we_explore_that_idea_a_bit_more": {
+      "id": "Could_we_explore_that_idea_a_bit_more",
+      "name": "Could we explore that idea a bit more?",
+      "entity_type": "Phrase",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163184"
+    },
+    "I_worked_on_something_similar_with_Keith": {
+      "id": "I_worked_on_something_similar_with_Keith",
+      "name": "I worked on something similar with Keith…",
+      "entity_type": "Phrase",
+      "properties": {},
+      "created_at": "2025-06-01T23:55:49.163191"
+    }
+  },
+  "triplets": [
+    {
+      "subject": "Will_Wade",
+      "predicate": "livesIn",
+      "object": "Manchester_UK",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-01T23:55:49.162760"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "worksAt",
+      "object": "Open_Assistive",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-01T23:55:49.162768"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "hasRole",
+      "object": "Innovation_Research_Manager",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-01T23:55:49.162774"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "knows",
+      "object": "Daisy",
+      "confidence": 1.0,
+      "source": "people",
+      "created_at": "2025-06-01T23:55:49.162780"
+    },
+    {
+      "subject": "Daisy",
+      "predicate": "hasRole",
+      "object": "slt",
+      "confidence": 1.0,
+      "source": "description",
+      "created_at": "2025-06-01T23:55:49.162864"
+    },
+    {
+      "subject": "Daisy",
+      "predicate": "wears",
+      "object": "glasses",
+      "confidence": 1.0,
+      "source": "description",
+      "created_at": "2025-06-01T23:55:49.162904"
+    },
+    {
+      "subject": "Daisy",
+      "predicate": "hasChildren",
+      "object": "2",
+      "confidence": 1.0,
+      "source": "description",
+      "created_at": "2025-06-01T23:55:49.162936"
+    },
+    {
+      "subject": "Daisy",
+      "predicate": "coauthored",
+      "object": "supercore",
+      "confidence": 1.0,
+      "source": "description",
+      "created_at": "2025-06-01T23:55:49.162969"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "knows",
+      "object": "Keith_Vertanen",
+      "confidence": 1.0,
+      "source": "people",
+      "created_at": "2025-06-01T23:55:49.162976"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "knows",
+      "object": "Lisa",
+      "confidence": 1.0,
+      "source": "people",
+      "created_at": "2025-06-01T23:55:49.162985"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "worksAt",
+      "object": "Open_Assistive",
+      "confidence": 0.8,
+      "source": "workplaces",
+      "created_at": "2025-06-01T23:55:49.162992"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "worksAt",
+      "object": "AT_Charity",
+      "confidence": 0.8,
+      "source": "workplaces",
+      "created_at": "2025-06-01T23:55:49.162997"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "attendedEvent",
+      "object": "AAC_conference_in_Liverpool",
+      "confidence": 1.0,
+      "source": "events",
+      "created_at": "2025-06-01T23:55:49.163006"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "metAt",
+      "object": "Daisy",
+      "confidence": 1.0,
+      "source": "event_description",
+      "created_at": "2025-06-01T23:55:49.163110"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "attendedEvent",
+      "object": "Barcelona_July_2024",
+      "confidence": 1.0,
+      "source": "events",
+      "created_at": "2025-06-01T23:55:49.163139"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "metAt",
+      "object": "Lisa",
+      "confidence": 1.0,
+      "source": "event_description",
+      "created_at": "2025-06-01T23:55:49.163144"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "attendedEvent",
+      "object": "VoiceGarden_launch",
+      "confidence": 1.0,
+      "source": "events",
+      "created_at": "2025-06-01T23:55:49.163149"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "hasInterest",
+      "object": "TTS",
+      "confidence": 1.0,
+      "source": "interests",
+      "created_at": "2025-06-01T23:55:49.163156"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "hasInterest",
+      "object": "open_hardware",
+      "confidence": 1.0,
+      "source": "interests",
+      "created_at": "2025-06-01T23:55:49.163162"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "hasInterest",
+      "object": "biking",
+      "confidence": 1.0,
+      "source": "interests",
+      "created_at": "2025-06-01T23:55:49.163166"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "hasInterest",
+      "object": "Sylvanian_families_with_Alice",
+      "confidence": 1.0,
+      "source": "interests",
+      "created_at": "2025-06-01T23:55:49.163173"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "saidPhrase",
+      "object": "That_sounds_like_a_plan",
+      "confidence": 1.0,
+      "source": "phrases",
+      "created_at": "2025-06-01T23:55:49.163179"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "saidPhrase",
+      "object": "Could_we_explore_that_idea_a_bit_more",
+      "confidence": 1.0,
+      "source": "phrases",
+      "created_at": "2025-06-01T23:55:49.163186"
+    },
+    {
+      "subject": "Will_Wade",
+      "predicate": "saidPhrase",
+      "object": "I_worked_on_something_similar_with_Keith",
+      "confidence": 1.0,
+      "source": "phrases",
+      "created_at": "2025-06-01T23:55:49.163193"
+    }
+  ],
+  "metadata": {}
+}

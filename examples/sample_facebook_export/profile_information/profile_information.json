@@ -1,0 +1,43 @@
+{
+  "profile_v2": {
+    "name": {
+      "full_name": "John Smith"
+    },
+    "places_lived": [
+      {
+        "place": {
+          "name": "San Francisco, CA"
+        }
+      }
+    ],
+    "work": [
+      {
+        "employer": {
+          "name": "Tech Company Inc"
+        },
+        "position": {
+          "name": "Software Engineer"
+        },
+        "start_timestamp": 1609459200,
+        "end_timestamp": null
+      },
+      {
+        "employer": {
+          "name": "Previous Corp"
+        },
+        "position": {
+          "name": "Junior Developer"
+        },
+        "start_timestamp": 1577836800,
+        "end_timestamp": 1609459200
+      }
+    ],
+    "education": [
+      {
+        "school": {
+          "name": "University of California"
+        }
+      }
+    ]
+  }
+}

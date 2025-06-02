@@ -1,0 +1,336 @@
+{
+  "entities": {
+    "John_Smith": {
+      "id": "John_Smith",
+      "name": "John Smith",
+      "entity_type": "Person",
+      "properties": {
+        "pronouns": null,
+        "location": "San Francisco, CA",
+        "workplace": "Tech Company Inc",
+        "role": "Software Engineer",
+        "source": "facebook"
+      },
+      "created_at": "2025-06-02T06:48:22.912849"
+    },
+    "San_Francisco_CA": {
+      "id": "San_Francisco_CA",
+      "name": "San Francisco, CA",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912864"
+    },
+    "Tech_Company_Inc": {
+      "id": "Tech_Company_Inc",
+      "name": "Tech Company Inc",
+      "entity_type": "Organization",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912880"
+    },
+    "Software_Engineer": {
+      "id": "Software_Engineer",
+      "name": "Software Engineer",
+      "entity_type": "Role",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912892"
+    },
+    "Alice_Johnson": {
+      "id": "Alice_Johnson",
+      "name": "Alice Johnson",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912904"
+    },
+    "Bob_Wilson": {
+      "id": "Bob_Wilson",
+      "name": "Bob Wilson",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912917"
+    },
+    "Carol_Davis": {
+      "id": "Carol_Davis",
+      "name": "Carol Davis",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912928"
+    },
+    "David_Brown": {
+      "id": "David_Brown",
+      "name": "David Brown",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912940"
+    },
+    "Previous_Corp": {
+      "id": "Previous_Corp",
+      "name": "Previous Corp",
+      "entity_type": "Organization",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912962"
+    },
+    "Junior_Developer": {
+      "id": "Junior_Developer",
+      "name": "Junior Developer",
+      "entity_type": "Role",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912972"
+    },
+    "University_of_California": {
+      "id": "University_of_California",
+      "name": "University of California",
+      "entity_type": "Organization",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912983"
+    },
+    "Student": {
+      "id": "Student",
+      "name": "Student",
+      "entity_type": "Role",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.912993"
+    },
+    "Facebook_post_from_2022_01_01": {
+      "id": "Facebook_post_from_2022_01_01",
+      "name": "Facebook post from 2022-01-01",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913005"
+    },
+    "Facebook_post_from_2021_12_31": {
+      "id": "Facebook_post_from_2021_12_31",
+      "name": "Facebook post from 2021-12-31",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913016"
+    },
+    "Facebook_post_from_2021_12_30": {
+      "id": "Facebook_post_from_2021_12_30",
+      "name": "Facebook post from 2021-12-30",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913027"
+    },
+    "MachineLearning": {
+      "id": "MachineLearning",
+      "name": "MachineLearning",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913038"
+    },
+    "AI": {
+      "id": "AI",
+      "name": "AI",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913050"
+    },
+    "innovation": {
+      "id": "innovation",
+      "name": "innovation",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913060"
+    },
+    "coding": {
+      "id": "coding",
+      "name": "coding",
+      "entity_type": "Interest",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913070"
+    },
+    "Alice": {
+      "id": "Alice",
+      "name": "Alice",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913577"
+    },
+    "Tech": {
+      "id": "Tech",
+      "name": "Tech",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:22.913601"
+    }
+  },
+  "triplets": [
+    {
+      "subject": "John_Smith",
+      "predicate": "livesIn",
+      "object": "San_Francisco_CA",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-02T06:48:22.912871"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "worksAt",
+      "object": "Tech_Company_Inc",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-02T06:48:22.912884"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasRole",
+      "object": "Software_Engineer",
+      "confidence": 1.0,
+      "source": "identity",
+      "created_at": "2025-06-02T06:48:22.912896"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "friendsWith",
+      "object": "Alice_Johnson",
+      "confidence": 1.0,
+      "source": "facebook_friends",
+      "created_at": "2025-06-02T06:48:22.912908"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "friendsWith",
+      "object": "Bob_Wilson",
+      "confidence": 1.0,
+      "source": "facebook_friends",
+      "created_at": "2025-06-02T06:48:22.912921"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "friendsWith",
+      "object": "Carol_Davis",
+      "confidence": 1.0,
+      "source": "facebook_friends",
+      "created_at": "2025-06-02T06:48:22.912932"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "friendsWith",
+      "object": "David_Brown",
+      "confidence": 1.0,
+      "source": "facebook_friends",
+      "created_at": "2025-06-02T06:48:22.912944"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "worksAt",
+      "object": "Tech_Company_Inc",
+      "confidence": 0.9,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912950"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasRole",
+      "object": "Software_Engineer",
+      "confidence": 1.0,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912955"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "worksAt",
+      "object": "Previous_Corp",
+      "confidence": 0.9,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912966"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasRole",
+      "object": "Junior_Developer",
+      "confidence": 1.0,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912976"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "worksAt",
+      "object": "University_of_California",
+      "confidence": 0.7,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912987"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasRole",
+      "object": "Student",
+      "confidence": 1.0,
+      "source": "facebook_profile",
+      "created_at": "2025-06-02T06:48:22.912996"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "posted",
+      "object": "Facebook_post_from_2022_01_01",
+      "confidence": 1.0,
+      "source": "facebook_posts",
+      "created_at": "2025-06-02T06:48:22.913009"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "posted",
+      "object": "Facebook_post_from_2021_12_31",
+      "confidence": 1.0,
+      "source": "facebook_posts",
+      "created_at": "2025-06-02T06:48:22.913020"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "posted",
+      "object": "Facebook_post_from_2021_12_30",
+      "confidence": 1.0,
+      "source": "facebook_posts",
+      "created_at": "2025-06-02T06:48:22.913031"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "MachineLearning",
+      "confidence": 1.0,
+      "source": "facebook_likes",
+      "created_at": "2025-06-02T06:48:22.913042"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "AI",
+      "confidence": 1.0,
+      "source": "facebook_likes",
+      "created_at": "2025-06-02T06:48:22.913054"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "innovation",
+      "confidence": 1.0,
+      "source": "facebook_likes",
+      "created_at": "2025-06-02T06:48:22.913063"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "coding",
+      "confidence": 1.0,
+      "source": "facebook_likes",
+      "created_at": "2025-06-02T06:48:22.913074"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "knows",
+      "object": "Alice",
+      "confidence": 0.6,
+      "source": "facebook_post_mentions",
+      "created_at": "2025-06-02T06:48:22.913583"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "checkedInAt",
+      "object": "Tech",
+      "confidence": 0.6,
+      "source": "facebook_post_locations",
+      "created_at": "2025-06-02T06:48:22.913605"
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,20 @@
+{
+  "friends_v2": [
+    {
+      "name": "Alice Johnson",
+      "timestamp": 1577836800
+    },
+    {
+      "name": "Bob Wilson",
+      "timestamp": 1580515200
+    },
+    {
+      "name": "Carol Davis",
+      "timestamp": 1583020800
+    },
+    {
+      "name": "David Brown",
+      "timestamp": 1585699200
+    }
+  ]
+}

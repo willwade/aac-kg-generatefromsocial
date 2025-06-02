@@ -1,0 +1,278 @@
+{
+  "entities": {
+    "John_Smith": {
+      "id": "John_Smith",
+      "name": "John Smith",
+      "entity_type": "Person",
+      "properties": {
+        "location": "San Francisco, California, USA",
+        "source": "ancestry"
+      },
+      "created_at": "2025-06-02T06:48:15.491733"
+    },
+    "Robert_Smith": {
+      "id": "Robert_Smith",
+      "name": "Robert Smith",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491748"
+    },
+    "Susan_Davis": {
+      "id": "Susan_Davis",
+      "name": "Susan Davis",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491771"
+    },
+    "Mary_Johnson": {
+      "id": "Mary_Johnson",
+      "name": "Mary Johnson",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491790"
+    },
+    "Emily_Smith": {
+      "id": "Emily_Smith",
+      "name": "Emily Smith",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491810"
+    },
+    "Michael_Smith": {
+      "id": "Michael_Smith",
+      "name": "Michael Smith",
+      "entity_type": "Person",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491827"
+    },
+    "Birth_of_John_Smith": {
+      "id": "Birth_of_John_Smith",
+      "name": "Birth of John Smith",
+      "entity_type": "Event",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.491845"
+    },
+    "San": {
+      "id": "San",
+      "name": "San",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.492000"
+    },
+    "San_Francisco_California_USA": {
+      "id": "San_Francisco_California_USA",
+      "name": "San Francisco, California, USA",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.492019"
+    },
+    "Los_Angeles_California_USA": {
+      "id": "Los_Angeles_California_USA",
+      "name": "Los Angeles, California, USA",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.493596"
+    },
+    "Chicago_Illinois_USA": {
+      "id": "Chicago_Illinois_USA",
+      "name": "Chicago, Illinois, USA",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.493610"
+    },
+    "Boston_Massachusetts_USA": {
+      "id": "Boston_Massachusetts_USA",
+      "name": "Boston, Massachusetts, USA",
+      "entity_type": "Place",
+      "properties": {},
+      "created_at": "2025-06-02T06:48:15.493627"
+    }
+  },
+  "triplets": [
+    {
+      "subject": "Robert_Smith",
+      "predicate": "parentOf",
+      "object": "John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491755"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "childOf",
+      "object": "Robert_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491759"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "isFamilyWith",
+      "object": "Robert_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491763"
+    },
+    {
+      "subject": "Susan_Davis",
+      "predicate": "parentOf",
+      "object": "John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491775"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "childOf",
+      "object": "Susan_Davis",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491780"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "isFamilyWith",
+      "object": "Susan_Davis",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491783"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "spouseOf",
+      "object": "Mary_Johnson",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491794"
+    },
+    {
+      "subject": "Mary_Johnson",
+      "predicate": "spouseOf",
+      "object": "John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491798"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "isFamilyWith",
+      "object": "Mary_Johnson",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491803"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "parentOf",
+      "object": "Emily_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491814"
+    },
+    {
+      "subject": "Emily_Smith",
+      "predicate": "childOf",
+      "object": "John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491817"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "isFamilyWith",
+      "object": "Emily_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491820"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "parentOf",
+      "object": "Michael_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491831"
+    },
+    {
+      "subject": "Michael_Smith",
+      "predicate": "childOf",
+      "object": "John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491834"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "isFamilyWith",
+      "object": "Michael_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491837"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "attendedEvent",
+      "object": "Birth_of_John_Smith",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.491849"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "bornIn",
+      "object": "San",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.492005"
+    },
+    {
+      "subject": "Birth_of_John_Smith",
+      "predicate": "happenedIn",
+      "object": "San",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.492009"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "bornIn",
+      "object": "San_Francisco_California_USA",
+      "confidence": 1.0,
+      "source": "ancestry_gedcom",
+      "created_at": "2025-06-02T06:48:15.492023"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "Los_Angeles_California_USA",
+      "confidence": 1.0,
+      "source": "ancestry_heritage",
+      "created_at": "2025-06-02T06:48:15.493602"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "Chicago_Illinois_USA",
+      "confidence": 1.0,
+      "source": "ancestry_heritage",
+      "created_at": "2025-06-02T06:48:15.493615"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "San_Francisco_California_USA",
+      "confidence": 1.0,
+      "source": "ancestry_heritage",
+      "created_at": "2025-06-02T06:48:15.493620"
+    },
+    {
+      "subject": "John_Smith",
+      "predicate": "hasInterest",
+      "object": "Boston_Massachusetts_USA",
+      "confidence": 1.0,
+      "source": "ancestry_heritage",
+      "created_at": "2025-06-02T06:48:15.493631"
+    }
+  ],
+  "metadata": {}
+}
